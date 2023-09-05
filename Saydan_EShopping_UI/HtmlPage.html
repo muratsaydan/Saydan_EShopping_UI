@@ -1,0 +1,1800 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+		<div class="statusBarClone"></div>
+		<div class="sticky-wrapper--header visible-md visible-lg">
+			<div class="sticky-wrapper--header__container">
+				<div class="sticky-wrapper--header__collapser">
+					<div class="sticky-wrapper--header__inner">
+						<div class="sticky-header"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sticky-wrapper--section visible-md visible-lg">
+			<div class="sticky-wrapper--header__container">
+				<div class="sticky-wrapper--header__collapser">
+					<div class="sticky-wrapper--header__inner">
+						<div class="sticky-section">
+							<!-- Fiyatı Düşen Ürünler,Yeni Ürünler,Ödeme Promosyonları ve Kampanyalar için sticky navbar -->
+							<!-- buradaki idlerin sırasına göre aralara li leri basıp divlerini silecek -->
+							<ul class="sections-menu">
+								<li data-sec='js-section-title-1' class='sections-menu-item' style="display: none;"><a href='#js-section-title-1' class='sections-menu-item-link'>Kampanyalar</a></li>
+								<li data-sec='js-section-title-2' class='sections-menu-item' style="display: none;"><a href='#js-section-title-2' class='sections-menu-item-link'>Ödeme Promosyonları</a></li>
+								<li data-sec='js-section-title-3' class='sections-menu-item' style="display: none;"><a href='#js-section-title-3' class='sections-menu-item-link'>Özel Fiyatlı Ürünler</a></li>
+								<li data-sec='js-section-title-4' class='sections-menu-item' style="display: none;"><a href='#js-section-title-4' class='sections-menu-item-link'>Yeni Ürünler</a></li>
+								<li data-sec='js-section-title-5' class='sections-menu-item' style="display: none;"><a href='#js-section-title-5' class='sections-menu-item-link'>Favori Ürünlerim</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sticky-wrapper--menu visible-md visible-lg">
+			<div class="sticky-wrapper--menu__container">
+				<div class="sticky-wrapper--menu__collapser">
+					<div class="sticky-wrapper--menu__inner"></div>
+				</div>
+			</div>
+		</div>
+		<header class="header">
+
+			<div class="user-statusbar hidden-xs">
+				<div class="user-statusbar__container">
+					<div class="user-statusbar__collapser">
+						<div class="user-information">
+							<div class="user-information__status"><span class="online"></span></div>
+							<div class="user-information__name"> <span>Hoşgeldin, Admin</span></div>
+							<div class="user-information__code"><span>Müşteri Kodu: 1017867</span></div>
+							<div class="user-information__company"><span><strong class="hidden-xs hidden-sm"></strong> HAKAN SENCAN AZRA PROJECT TAŞ.</span></div>
+							<div class="user-information__code pointer Representatives" data-toggle="popover" data-popover="true" data-html="true" data-container="body">
+								<span>
+									<i class="fa fa-users c-red"></i>
+									<span class="hidden-xs hidden-sm hidden-md">Temsilcilerimiz</span>
+								</span>
+							</div>
+							<div class="myPopover hide"></div>
+						</div>
+						<div class="trade__information">
+							<div class="currency__type"><span>Euro</span></div>
+							<div class="currency__buy_rate"><span id="currencyEurToTrl" class="rate">3,9670</span><span class="currency-separator"></span></div>
+							<div class="currency__type"><span>Dolar</span></div>
+							<div class="currency__buy_rate"><span id="currencyUsdToTrl" class="rate">3,7162</span></div>
+							<a data-container="body" data-content="<span class='nowrap'>Çıkış Yap</span> " data-html="true" rel="popover" data-placement="auto bottom" class="logOff" href="/Account/LogOff"><span class="hidden-sm hiden-xs">Çıkış Yap </span><i class="fa fa-power-off c-red"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<style>
+				fieldset.tBaslik > legend > span.badge {
+					background: #AC162C;
+					font-size: 12px;
+					font-weight: 100;
+				}
+
+				.popover {
+					max-width: 470px !important;
+				}
+
+				.tRow {
+					margin: 0 !important;
+				}
+
+				.tCol {
+					padding: 0 7px !important;
+					margin-bottom: 9px;
+				}
+
+				.tBaslik legend {
+					display: block;
+					width: initial;
+					margin-bottom: 0;
+					font-size: 15px;
+					line-height: inherit;
+					color: #333333;
+					border: 0;
+				}
+
+				.tBaslik {
+					padding: 4px 10px;
+					border: 1px solid #E6B9C0;
+				}
+
+				.kapat {
+					position: absolute;
+					bottom: -20px;
+					left: 0;
+					background: #AC162C;
+					width: 100%;
+					color: #fff;
+					text-align: center;
+					cursor: pointer;
+					font-size: 14px;
+					padding: 3px 10px;
+				}
+
+					.kapat span {
+						font-size: 12px;
+					}
+
+				.Representatives, .RepresentativesClone {
+					min-width: 37px;
+				}
+
+
+
+				.logOff, .logOffClone {
+					padding-left: 16px;
+				}
+
+					.logOff span, .logOffClone span {
+						font-size: 11px;
+						vertical-align: top;
+						color: #666A6C;
+					}
+
+					.logOff i, .logOffClone i {
+						padding-top: 7px;
+					}
+
+				.user-information__company {
+					max-width: 255px;
+				}
+			</style>
+
+
+
+
+			<style>
+				.open__menu__inner {
+					padding: 0 !important;
+				}
+
+					.open__menu__inner .main_menu .top_menu > li {
+						height: auto !important;
+					}
+
+				.sticky-wrapper--menu {
+					top: -70px !important;
+				}
+
+					.sticky-wrapper--menu .open__menu__inner, .sticky-wrapper--menu .services__menu__inner {
+						/* statusBar artık scroll durumunda fixed duruma getirildi.*/
+						/*headerbar kısaltması nedeniyle 150px'e indirildi*/
+						top: 150px !important;
+						/*top: 170px !important;*/
+						/*top: 130px !important;*/
+					}
+
+				.yakindaMobile:after {
+					content: "Çok Yakında..";
+					color: #AC162C;
+					position: absolute;
+					left: 60px;
+					font-weight: bold;
+				}
+
+				.yakindaMobile span {
+					-webkit-filter: blur(1px);
+					-moz-filter: blur(1px);
+					-o-filter: blur(1px);
+					-ms-filter: blur(1px);
+					filter: blur(1px);
+					color: #aaa;
+				}
+
+				.defectiveDescription {
+					line-height: 12px !important;
+					margin: 12px auto;
+				}
+			</style>
+			<div class="header__container">
+				<div class="header__collapser">
+					<div class="services__menu js_normal_services_menu">
+						<div class="services__menu__inner js-click-ignore">
+							<div class="services_menu">
+								<ul>
+
+									<li>
+
+										<div class="menuKutu">
+
+
+											<div class="curtain">
+												<img src="/Content/app/img/dummy/ozel-kategori-urunleri.png" alt="">
+												<div class="baslik">Özel Kategori Ürünleri</div>
+											</div>
+
+
+											<div class="anime item-2 item1">
+												<a class="p-0" href="/Product?productState=EK1">
+													<img src="/Content/app/img/dummy/gaming.png" />
+													<div class="baslik">Gaming Ürün Kategorisi</div>
+												</a>
+											</div>
+
+											<div class="anime item-2 item2">
+												<a class="p-0" href="/Product?productState=EK2">
+													<img src="/Content/app/img/dummy/smb.png" />
+													<div class="baslik">SMB Ürün Kategorisi</div>
+												</a>
+											</div>
+
+
+
+										</div>
+
+									</li>
+
+
+
+									<li>
+										<a href="/Pay/Route">
+											<div class="imgWrapper"><img src="/Content/app/img/dummy/online-odeme.png" alt="" /></div><span class="desc">Online Taksitli Ödeme Sayfası</span>
+										</a>
+									</li>
+									<li>
+										<a href="/Route/Report">
+											<div class="imgWrapper"><img src="/Content/app/img/dummy/raporlarim.png" alt="" /></div><span class="desc">Raporlarım &amp; İstatistiklerim</span>
+										</a>
+									</li>
+									<li>
+										<a href="/Subscription">
+											<div class="imgWrapper"><img src="/Content/app/img/dummy/PAY_BUTON.png" alt="" /></div><span class="desc">Penta Abonelik Yönetimi</span>
+										</a>
+									</li>
+									<li>
+										<a href="/Order/ProjectList">
+											<div class="imgWrapper"><img src="/Content/app/img/dummy/yazilim.png" alt="" /></div><span class="desc">Fiyat Taleplerim</span>
+										</a>
+									</li>
+									<li>
+										<a href="/Storage">
+											<div class="imgWrapper"><img src="/Content/app/img/dummy/penta-depom.png" alt="" /></div><span class="desc">Penta Depom</span>
+										</a>
+									</li>
+
+
+									<li>
+
+										<div class="menuKutu">
+
+
+											<div class="curtain">
+												<img src="/Content/app/img/dummy/wizard.png" alt="">
+												<div class="baslik">Sihirbazlar</div>
+											</div>
+
+
+											<div class="anime item-3 item1">
+												<a class="p-0" href="/Wizard/Sbw">
+													<img src="/Content/app/img/dummy/sunucu.png" />
+													<div class="baslik">Sunucu Yapılandırma Sihirbazı</div>
+												</a>
+											</div>
+
+											<div class="anime item-3 item2">
+												<a class="p-0" href="/Wizard/Cbw">
+													<img src="/Content/app/img/dummy/bilgisayar-yapilandirma.png" />
+													<div class="baslik">Bilgisayar Yapılandırma Sihirbazı</div>
+												</a>
+											</div>
+											<div class="anime item-3 item3">
+												<a class="p-0" href="/Wizard/Ebw">
+													<img src="/Content/app/img/dummy/exper-yapilandirma.png" />
+													<div class="baslik">Exper Yapılandırma Sihirbazı</div>
+												</a>
+											</div>
+
+
+										</div>
+
+									</li>
+
+
+
+									<li>
+										<a href="/Wizard/KabinetSihirbazi">
+											<div class="imgWrapper"><img src="/Content/app/img/dummy/cabinet.png" alt="" /></div><span class="desc">Kabinet Sihirbazı</span>
+										</a>
+									</li>
+									<li>
+										<a href="/Customer/TicketForm">
+											<div class="imgWrapper"><img src="/Content/app/img/dummy/fikrim.png" alt="" /></div><span class="desc">Fikrim Var</span>
+										</a>
+									</li>
+									<li>
+										<a href="/WebinarCalender/WebinarList">
+											<div class="imgWrapper"><img src="/Content/app/img/dummy/penta-yayin.png" alt="" /></div><span class="desc">Penta Yayın Kuşağı</span>
+										</a>
+									</li>
+									<li>
+										<a href="/OutletMarket/OutletMarket">
+											<div class="imgWrapper"><img src="/Content/app/img/dummy/outlet.png" alt="" /></div><span class="desc">Penta Outlet</span>
+										</a>
+									</li>
+									<li>
+										<div class="menuKutu">
+
+
+											<div class="curtain">
+												<img src="/Content/app/img/dummy/credit.png" alt="">
+												<div class="baslik">Talep Formları</div>
+											</div>
+
+
+											<div class="anime item-4 item1">
+												<a class="p-0" href="/Credit">
+													<img src="/Content/app/img/dummy/credit.png" />
+													<div class="baslik">Kredi Talebi</div>
+												</a>
+											</div>
+
+											<div class="anime item-4 item2">
+												<a class="p-0" href="/Ptm ">
+													<img src="/Content/app/img/dummy/credit.png" />
+													<div class="baslik">Teknoloji Merkezi Rezervasyonu</div>
+												</a>
+											</div>
+
+
+
+										</div>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="open__menu js_normal_open_menu">
+						<div class="open__menu__inner js-click-ignore burgerMenuContainerDiv">
+							<div class="user-information--menu visible-xs">
+								<!--mobile için -->
+								<div class="user-information__status"><a title="Çıkış Yap" href="/Account/LogOff"><i class="fa fa-power-off c-red"></i></a></div>
+								<div class="user-information__name"> <span>Admin</span></div>
+								<div class="user-information__code"><span>1017867</span></div>
+								<div class="user-information__company"><span>HAKAN SENCAN AZRA PROJECT TAŞ.</span></div>
+							</div>
+							<div class="main_menu">
+								<ul class="top_menu">
+									<li>
+										<a href="javascript:;">SATIŞ İŞLEMLERİ</a>
+										<div class="sub_menu">
+											<a href="/Basket/Basket">Sepetim</a>
+											<a href="/Order/OrderList">Sipariş Takibi</a>
+											<a href="/Accounting/InvoiceList">Fatura Listesi</a>
+											<a href="javascript:;" onclick="PENTA.Utils.openAjaxPopup('/Procedure/TransformTimes');$.LoadingOverlay('show');">Sevkiyat Saatleri</a>
+											<a href="/Product/CompareProducts">Kıyaslama Sepeti</a>
+
+
+
+										</div>
+									</li>
+									<li>
+										<a href="javascript:;">MÜŞTERİ HİZMETLERİ</a>
+										<div class="sub_menu">
+
+
+											<a href="/Customer/TicketForm">Öneri/Yorum</a>
+											<a href="/Order/OrderList?Type=cargo">Kargom Nerede</a>
+											<a href="/Service/Warranty">Garanti Süresi Sorgulama</a>
+											<a href="/Service/TechnicalServicesList">Yetkili Servisler</a>
+											<a href="/Service/DefectiveProducts">Arızalı Ürün Takibi</a>
+											<a href="/Accounting/ReturnInvoiceCreate">İade Formu</a>
+											<a href="/CustomerService/FrequentlyAskedQuestions">Sık Sorulan Sorular</a>
+											<a href="/Ptm">Teknoloji Merkezi</a>
+
+											<a href="/Procedure">Prosedür</a>
+											<a href="/CustomerService/Announcements">Duyurular</a>
+											<a href="/CustomerService/AnnouncementPopup">Size Özel Haberler</a>
+										</div>
+									</li>
+									<li>
+										<a href="javascript:;">MUHASEBE &amp; FİNANS</a>
+										<div class="sub_menu">
+
+											<a href="/Accounting/AccountStatementGeneral">Cari Hesap Özeti</a>
+											<a href="/Accounting/AccountStatement">Hesap Ekstresi</a>
+											<a href="/Accounting/AccountStatementAging">Bakiye Yaşlandırma</a>
+											<a href="/Accounting/OpenAccounting">Tahsil Edilecek Çekler</a>
+											<a href="/Pay/Route">E-Ödeme</a>
+											<a href="/Accounting/ePaymentList">E-Ödeme Listesi</a>
+											<a href="/Accounting/BankAccounts">Banka Hesap No.ları</a>
+											<a href="/Customer/BankAccounts">Banka Hesaplarım</a>
+											<a href="/Home/Currencies">Döviz Kurları</a>
+											<a href="/Accounting/BabsForm">BA-BS Formu</a>
+											<a href="/Accounting/AccountOffsetHistory">Cep Telefonu Denkleştirme Raporu</a>
+										</div>
+									</li>
+									<li>
+										<a href="javascript:;">YÖNETİM PANELİ</a>
+										<div class="sub_menu">
+
+											<a href="/Customer/FirmInformations">Firma Bilgilerim</a>
+											<a href="/UserManagement/UserManagement">Kullanıcı Tanımlama</a>
+											<a href="/Customer/MyDeliveryAdresses">Teslimat Adreslerim</a>
+											<a href="/Accounting/PasswordChange">Şifre İşlemleri</a>
+											<a href="/Accounting/AccountRelatedPersons">İlgili Kişiler</a>
+											<a href="/Pos/CustomerPosMembers">Sanal POS Üye İşlemleri</a>
+											<a href="/Home/SiteMap">Site Haritası</a>
+											<a href="/Account/AboutUs">Hakkımızda</a>
+											<a href="/Account/Contact">İletişim</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="branch__support visible-xs"><a class="btn js_branch_menu_resp_btn"><i class="penta-icon pi_triangle-bottom"></i>BAYİNET HİZMETLERİ</a></div>
+							<div class="branch_menu_resp js_branch_menu_resp">
+								<ul>
+									<li>
+										<a href="/Product?productState=EK1">
+											<div class="imgWrapper"><img src="/Content/app/img/dummy/gaming.png" /></div><span class="desc">GAMING ÜRÜNLERİ</span>
+										</a>
+									</li>
+									<li>
+										<a href="/Product?productState=EK2">
+											<div class="imgWrapper"><img src="/Content/app/img/dummy/smb.png" /></div><span class="desc">SMB ÜRÜNLERİ</span>
+										</a>
+									</li>
+									<li>
+										<a href="/Pay/Route">
+											<div class="imgWrapper"><img src="/Content/app/img/dummy/gaming-urunler.png" /></div><span class="desc">ONLINE TAKSITLI ÖDEME SAYFASI</span>
+										</a>
+									</li>
+									<li>
+										<a href="/Route/Report">
+											<div class="imgWrapper"><img src="/Content/app/img/dummy/gaming-urunler.png" /></div><span class="desc">RAPORLARIM &amp; İSTATISTIKLERIM</span>
+										</a>
+									</li>
+									<li>
+										<a href="/Route/Cloud">
+											<div class="imgWrapper"><img src="/Content/app/img/dummy/gaming-urunler.png" /></div><span class="desc">PENTA BULUT</span>
+										</a>
+									</li>
+									<li>
+										<a href="/Order/ProjectList">
+											<div class="imgWrapper"><img src="/Content/app/img/dummy/gaming-urunler.png" /></div><span class="desc">FİYAT TALEPLERİM</span>
+										</a>
+									</li>
+									<li>
+										<a href="/Storage">
+											<div class="imgWrapper"><img src="/Content/app/img/dummy/gaming-urunler.png" /></div><span class="desc">PENTA DEPOM</span>
+										</a>
+									</li>
+									<li>
+										<a href="/Wizard/Cbw">
+
+											<div class="imgWrapper"><img src="/Content/app/img/dummy/gaming-urunler.png" /></div><span class="desc">BILGISAYAR YAPILANDIRMA SİHİRBAZI</span>
+										</a>
+									</li>
+									<li>
+										<a href="/Wizard/Sbw">
+
+											<div class="imgWrapper"><img src="/Content/app/img/dummy/gaming-urunler.png" /></div><span class="desc">SUNUCU YAPILANDIRMA SİHİRBAZI</span>
+										</a>
+									</li>
+									<li>
+										<a href="/Wizard/Ebw">
+
+											<div class="imgWrapper"><img src="/Content/app/img/dummy/gaming-urunler.png" /></div><span class="desc">EXPER YAPILANDIRMA SİHİRBAZI</span>
+										</a>
+									</li>
+									<li>
+										<a href="/Wizard/KabinetSihirbazi">
+
+											<div class="imgWrapper"><img src="/Content/app/img/dummy/gaming-urunler.png" /></div><span class="desc">KABİNET SİHİRBAZI</span>
+										</a>
+									</li>
+									<li>
+										<a href="/Customer/TicketForm">
+											<div class="imgWrapper"><img src="/Content/app/img/dummy/gaming-urunler.png" /></div><span class="desc">FIKRIM VAR</span>
+										</a>
+									</li>
+									<li>
+										<a href="/WebinarCalender/WebinarList">
+											<div class="imgWrapper"><img src="/Content/app/img/dummy/gaming-urunler.png" /></div><span class="desc">PENTA YAYIN KUŞAĞI</span>
+										</a>
+									</li>
+									<li>
+										<a href="/OutletMarket/OutletMarket">
+											<div class="imgWrapper"><img src="/Content/app/img/dummy/gaming-urunler.png" /></div><span class="desc">PENTA OUTLET</span>
+										</a>
+									</li>
+									<li>
+										<a href="/Credit">
+											<div class="imgWrapper"><img src="/Content/app/img/dummy/gaming-urunler.png" /></div><span class="desc">KREDİ TALEP</span>
+										</a>
+									</li>
+									<li class="yakindaMobile">
+										<a href="javascript:;">
+											<div class="imgWrapper"><img src="/Content/app/img/dummy/gaming-urunler.png" /></div><span class="desc">PENTA TEKNOLOJI MERKEZI</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<!--TODO (Sabri) burası bağlanacak-->
+
+							<div class="service__track">
+								<a href="/Service/DefectiveProducts?IsOpen=True" class="service__track__btn">
+									<span class="title">ARIZALI ÜRÜN TAKİBİ</span>
+									<span class="desc defectiveDescription"><!--Dinamik olarak doluyor. Bkz.script.js--></span>
+								</a>
+							</div>
+							<div class="service__track">
+								<a href="/Order/OrderList?startDate=24_01_2017&amp;endDate=08_02_2017&amp;state=Z" class="service__track__btn">
+									<span class="title">TESLİMAT TAKİBİ</span>
+									<span class="desc transportCargoProduct"><!--Dinamik olarak doluyor. Bkz.script.js--></span>
+								</a>
+							</div>
+							<div class="footer__social footer__social--in-menu">
+								<nav>
+									<a target="_blank" href="https://www.facebook.com/pentateknoloji" class="facebook"><i class="penta-icon pi_zb-facebook"></i></a>
+									<a target="_blank" href="https://twitter.com/pentateknoloji" class="twitter"><i class="penta-icon pi_zb-twitter"></i></a>
+									<a target="_blank" href="https://www.linkedin.com/company/penta-teknoloji-urunleri-dagitim-ticaret-a-s" class="linkedin"><i class="penta-icon pi_zb-linkedin"></i></a>
+									<a target="_blank" href="https://www.youtube.com/channel/UCw6_tNyqZ5_Awv-SGrlLK6A" class="youtube"><i class="penta-icon pi_zb-youtube"></i></a>
+								</nav>
+							</div>
+						</div>
+					</div>
+					<div class="menu">
+						<div class="menu__brand" style="overflow: hidden"><a href="/"><i class="penta-icon pi_bayinet"></i></a></div>
+						<div class="menu__services hidden-xs"><a class="btn services__button js_services_menu_btn"><i class="penta-icon pi_triangle-bottom"></i>BAYİNET HİZMETLERİ</a></div>
+						<div class="menu__btn js_responsive_menu_btn burgerMenu"><i class="penta-icon pi_burger"></i><span class="menu_text hidden-xs">MENÜ</span></div>
+						<div class="menu__cart">
+							<a href="/Basket/Basket">
+								<span class="badge BasketCurrentItemsCountSpan">
+									<img height="7" src="/Content/app/img/basketmin-loader.gif" />
+								</span><i class="penta-icon pi_cart"></i>
+							</a><span class="total_amount hidden-xs"></span>
+						</div>
+
+
+
+						<div class="menu__banner hidden"></div>
+
+
+
+					</div>
+					<div class="search__wrapper">
+						<div class="search">
+							<div class="search__box">
+								<i class="penta-icon pi_search"></i>
+								<input placeholder="Ne arıyorsunuz?" type="text" class="query searchTxt">
+							</div>
+							<div class="search__btn">
+								<button onclick="searchButton()">ARA</button>
+							</div>
+						</div>
+						<!-- <div id="dvSearchResult" style="display: none; height: 300px; overflow: auto; position: initial; margin: 248px 0 0 0; background-color: beige; direction: initial;">
+								 <div style="float:left;width:300px;" id="dvCategoriesSearchResult"></div>
+							   <div id="dvProductsSearchResult"></div>
+						-->
+					</div>
+				</div>
+
+			</div>
+
+
+
+
+		</header>
+		<style>
+			.quick-search__menu__wrapper {
+				height: 475px;
+				overflow-y: auto;
+			}
+
+			.quick-search__products__wrapper {
+				overflow-y: auto;
+				height: 525px;
+			}
+
+			.searchDetailID {
+				color: #555;
+				font-size: 12px;
+			}
+		</style>
+		<div class="quick-search js-quick-search">
+			<div class="quick-search__container">
+				<div class="quick-search__desktop">
+					<div class="row no-gutter">
+						<div class="col-sm-3">
+							<div class="quick-search__menu">
+								<div class="quick-search__menu__title">KATEGORİLER</div>
+								<ul class="quick-search__menu__wrapper">
+
+									<!--<li class="quick-search__menu__item"><a href="#kategori1" class="js-quick-search-toggle active">Kategori 1</a></li>
+									<li class="quick-search__menu__item"><a href="#kategori2" class="js-quick-search-toggle ">Kategori 2</a></li>
+									<li class="quick-search__menu__item"><a href="#kategori3" class="js-quick-search-toggle ">Kategori 3</a></li>-->
+
+
+								</ul>
+							</div>
+						</div>
+						<div class="col-sm-9 searchContent">
+							<div class="quick-search__products__wrapper">
+
+
+
+								<div id="QuickSearchProductList" class="quick-search__products">
+
+									<!--  <div class="quick-search__products__item">
+															  <div class="media">
+																 <div class="media-left media-middle"><a href="javascript:;"><img src="~/Content/app/img/dummy/product-1.png" alt="" /></a></div>
+																 <div class="media-body media-middle"><a href="javascript:;">11115 port 10/100 Masaüstü Switch</a></div>
+															  </div>
+														   </div>
+														   <div class="quick-search__products__item">
+															  <div class="media">
+																 <div class="media-left media-middle"><a href="javascript:;"><img src="~/Content/app/img/dummy/product-1.png" alt="" /></a></div>
+																 <div class="media-body media-middle"><a href="javascript:;">11115 port 10/100 Masaüstü Switch</a></div>
+															  </div>
+														   </div>
+									-->
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="quick-search__mobile">
+					<div>
+						<!-- <a href="javascript:;" class="quick-search__products__item">m-sonn dış 5 port 10/100 Masaüstü Switch</a>
+						<a href="javascript:;" class="quick-search__products__item">m-NB K555LN-XO398D i5 5200U 4G 1TB 15.6 2GVGA DOS</a>
+						<a href="javascript:;" class="quick-search__products__item">m-J1800I DDR3 ITX VGA HDMI DVI GLAN SATA2 USB 3.0 Tümleşik İşlemcili</a>
+						<a href="javascript:;" class="quick-search__products__item">m-5 port 10/100 Masaüstü Switch</a>
+						<a href="javascript:;" class="quick-search__products__item">m-NB K555LN-XO398D i5 5200U 4G 1TB 15.6 2GVGA DOS</a>
+						<a href="javascript:;" class="quick-search__products__item">m-J1800I DDR3 ITX VGA HDMI DVI GLAN SATA2 USB 3.0 Tümleşik İşlemcili</a>
+						<a href="javascript:;" class="quick-search__products__item">m-NB K555LN-XO398D i5 5200U 4G 1TB 15.6 2GVGA DOS</a>-->
+					</div>
+					<a onclick="searchButton()" href="javascript:;" class="quick-search__products__item btn btn--gray-dark">TÜM SONUÇLARI GÖSTER</a>
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+		<script type="text/javascript" src="/Scripts/jquery-1.10.2.js?v=000030"></script>
+
+		<div id="js_sticky_header_hook" class="container">
+			<div class="product-detail">
+				<div class="breadcrumb">
+					<a href="/">Ana Sayfa</a>
+					<a href="/Product?CategoryId="></a>
+					<a href="/Product?CategoryId=02">Kişisel Bilgisayar</a>
+					<a href="/Product?CategoryId=02030">All in One</a>
+					<a href="/Product?CategoryId=02030115">MSI</a>
+					<a href="/Product?CategoryId=02030115001">Bireysel</a>
+					<a href="javascript:;">MSI AIO PRO 20ET 4BW-045XEU 19.5 HD+(1600X900) MULTI-TOUCH CELERON N3160 4G 1TB DOS DVD BEYAZ-BEYAZ-BEYAZ</a>
+
+
+				</div>
+				<div class="priceControlSection">
+
+					<a href="javascript:;" onclick="toggle_visibility('priceSelectionBox');" class="priceSelection pointer priceControlButton">
+						<i class="fa fa-user-secret"></i>
+					</a>
+
+					<div id="priceSelectionBox" class="psb_productDetail">
+						<div class="row">
+							<p><i class="fa fa-asterisk c-red"></i> Lütfen listede görünmesini istediğiniz fiyat türünü işaretleyin</p>
+
+							<div class="col-md-12">
+								<input type="checkbox" checked="checked" class="sizeOzel">  Size Özel
+							</div>
+
+							<div class="col-md-12">
+								<input type="checkbox" checked="checked" class="bayiFiyati">  Bayi Fiyatı
+							</div>
+
+							<div class="col-md-12">
+								<input type="checkbox" checked="checked" class="teskf">  T.E.S.K.F.
+							</div>
+
+							<div class="col-md-12 saveButton">
+								<button id="btnShowPriceTypeSelect" class="btn btn-success btn-sm"><i class="fa fa-floppy-o"></i> Kaydet</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="product-detail-box no-gutter">
+
+
+
+					<div class="col-md-6 col-md-push-6">
+						<div class="product-detail-box__right">
+							<div class="iconx">
+
+								<div class="iconx-box">
+									<div class="inline-box iconx-promosyon">
+										<img src="/Content/app/img/icons/icon-promosyon-white.svg" alt="promosyonlu Ürün" height="17" data-nosvg="~/Content/app/img/icons/icon-promosyon-white.png" />
+										<span>promosyonlu Ürün</span>
+									</div>
+								</div>
+
+
+
+								<div class="iconx-box">
+									<a href="javascript:;" onclick="bt.BundlePopup('210123853')">
+										<div class="inline-box iconx-bundle">
+											<img src="/Content/app/img/icons/icon-bundle-white.svg" alt="Bundle Ürün" height="17" data-nosvg="~/Content/app/img/icons/icon-bundle-white.png" />
+											<span>Bundle Ürün</span>
+										</div>
+									</a>
+								</div>
+
+
+
+
+							</div>
+							<div class="product-detail-box__info__top">
+								<div class="row">
+									<div class="col-md-10">
+										<h1 class="product-detail-box__title js-product-detail-box__title">MSI AIO PRO 20ET 4BW-045XEU 19.5 HD+(1600X900) MULTI-TOUCH CELERON N3160 4G 1TB DOS DVD BEYAZ-BEYAZ-BEYAZ</h1>
+									</div>
+									<div class="col-md-2">
+										<img src="http://img.bayinet.com.tr/Content/Brands/234/images/MSI.jpg" alt="" class="img-thumbnail" style="max-width: 70px" onerror="imgError(this, 'no-img-63.png' );">
+									</div>
+								</div>
+								<div class="product-detail-box__info__tech">
+									<div class="row js-product-detail-box__info__tech">
+										<div class="col-sm-4">
+											Stok Kodu : <strong>210123853</strong>
+										</div>
+										<div class="col-sm-4">
+											Ürün Kodu : <strong>PRO 20ET 4BW-045XEU</strong>
+										</div>
+										<div class="col-sm-4">
+											<span>Garanti Süresi :</span> <strong>24 Ay</strong>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div id="accordion" class="product-detail-box__price js-responsive-tab-container">
+								<div class="tab-nav-mobile js-tab-nav-mobile">
+									<select class="selectpicker js-responsive-tab__select-navigation">
+										<option value="#teskf">T.E.S.K.F.</option>
+										<option value="#size-ozel">Size Özel</option>
+										<option value="#bayi-fiyati">Bayi Fiyatı</option>
+									</select>
+								</div>
+								<ul role="tablist" data-min="480" class="nav nav-tabs js-responsive-tab">
+									<li role="presentation"><a href="#teskf" aria-controls="teskf" role="tab" data-toggle="tab" data-parent="#accordion">T.E.S.K.F.</a></li>
+									<li role="presentation" class="active"><a href="#size-ozel" aria-controls="size-ozel" role="tab" data-toggle="tab" data-parent="#accordion">Size Özel</a></li>
+									<li role="presentation"><a href="#bayi-fiyati" aria-controls="bayi-fiyati" role="tab" data-toggle="tab" data-parent="#accordion">Bayi Fiyatı</a></li>
+								</ul>
+								<div class="tab-content">
+									<div id="teskf" role="tabpanel" class="tab-pane">
+										<div class="panel-body">
+											<div class="js-product-detail-box__price">
+												<div class="product-detail-box__price__big h1">471,00 USD + KDV</div>
+												<div class="product-detail-box__price__total">2.065,39 TRY (%18 KDV DAHİL)</div>
+											</div>
+										</div>
+									</div>
+									<div id="size-ozel" role="tabpanel" class="tab-pane active">
+										<div class="panel-body">
+											<div class="js-product-detail-box__price">
+												<div class="product-detail-box__price__big h1">427,00 USD + KDV</div>
+												<div class="product-detail-box__price__total">1.872,44 TRY (%18 KDV DAHİL)</div>
+											</div>
+										</div>
+									</div>
+									<div id="bayi-fiyati" role="tabpanel" class="tab-pane">
+										<div class="panel-body">
+											<div class="js-product-detail-box__price">
+												<div class="product-detail-box__price__big h1">440,00 USD + KDV</div>
+												<div class="product-detail-box__price__total">1.929,45 TRY (%18 KDV DAHİL)</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="addCartRow">
+									<div class="product-detail-box__price__addcart">
+										<select name="sube" class="selectpicker js-product-detail-box__sube" id="sube-depo">
+											<option value="2001">Merkez Depo</option>
+										</select>
+										<input id="ProductAmount" type="text" name="adet" value="1" data-min="1" data-jointext="" class="js-product-input-increment js-product-detail-box__adet productAmount" />
+										<button class="product-detail-box__price__addcart__submit productAddToChart">SEPETE EKLE</button>
+									</div>
+									<div class="product-detail-box__price__info">
+										<div class="row">
+											<div class="col-sm-3">
+												Merkez Depo<br />
+												<span class="stock stock--green" id="stock-color"></span><span id="stock-string">50+ Ürün Stokta</span>
+											</div>
+											<!--yapılana kadar pasif konuma getirildi-->
+											<!-- <div class="col-sm-3">
+											  <div class="item">
+											    <a href="javascript:;"><i class="penta-icon pi_za-ring"></i>Fiyatı Düşünce Haber Ver</a>
+											  </div>
+											</div>-->
+
+											<div class="col-sm-3">
+												<div class="item">
+													<a href="javascript:;" class="addToCompareList" data-productid="210123853">
+														<i class="penta-icon pi_direction"></i>Kıyaslama Sepetine At
+													</a>
+												</div>
+											</div>
+											<div class="col-sm-3">
+												<div class="item">
+													<a href="javascript:Product.PdfExportStepNext1();">
+														<i class="fa fa-download"></i> Çıktı Al
+													</a>
+												</div>
+											</div>
+											<div class="col-sm-3">
+												<div class="item">
+													<a href="javascript:Product.SendMailStepNext1();">
+														<i class="fa fa-envelope"></i> Müşteriye Haber ver
+													</a>
+												</div>
+											</div>
+											<div class="col-sm-6 m-t-10">
+												<div class="">
+
+												</div>
+											</div>
+											<div class="col-sm-3 addMyFavorite pull-right">
+												<div class="item">
+
+													<a href="javascript:;" data-favid="210123853" class="addOrRemoveFav"><i class="fa fa-star-o"></i><span>  Favorilerime Ekle</span></a>
+												</div>
+
+											</div>
+
+
+										</div>
+
+										<div class="row">
+											<div class="col-sm-3">
+												<div class="item">
+												</div>
+											</div>
+											<div class="col-sm-3">
+												<div class="item">
+												</div>
+											</div>
+											<div class="col-sm-3">
+												<div class="item">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-detail-box__bottom">
+								<div class="product-detail-box__bottom__title h6">
+									<a href="/OutletMarket/OutletMarket?ProductId=210123853">Aynı Ürüne Ait Outlet Ürünleri (1 Adet)</a>
+								</div>
+
+								<div class="product-detail-box__bottom__info">
+									<a href="/OutletMarket/OutletProductDetail?ProductId=210123853&OutletProductId=ID051940">
+										<span class="price">365,0 USD</span><span>Kutusu A&#231;ilmiş</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-md-pull-6">
+						<div class="product-images">
+							<div class="sync-carousel">
+								<div id="sync1" class="owl-carousel image-list">
+									<div class="item">
+										<img src="http://img.bayinet.com.tr/Content/ProductImages/210123853/images/210123853_1.jpg" alt="" class="product-detail-image" />
+									</div>
+									<div class="item">
+										<img src="http://img.bayinet.com.tr/Content/ProductImages/210123853/images/210123853_2.jpg" alt="" class="product-detail-image" />
+									</div>
+									<div class="item">
+										<img src="http://img.bayinet.com.tr/Content/ProductImages/210123853/images/210123853_3.jpg" alt="" class="product-detail-image" />
+									</div>
+								</div>
+								<div class="thumb-list">
+
+									<div id="sync2" class="owl-carousel">
+										<div class="item">
+											<img src="http://img.bayinet.com.tr/Content/ProductImages/210123853/images/210123853_1.jpg" alt="" />
+										</div>
+										<div class="item">
+											<img src="http://img.bayinet.com.tr/Content/ProductImages/210123853/images/210123853_2.jpg" alt="" />
+										</div>
+										<div class="item">
+											<img src="http://img.bayinet.com.tr/Content/ProductImages/210123853/images/210123853_3.jpg" alt="" />
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="product-detail-box--fixed visible-md visible-lg">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-5">
+								<div class="media">
+									<div class="media-left">
+										<figure><img src="" alt="" class="js-product-detail-box--fixed__image" /></figure>
+									</div>
+									<div class="media-body media-middle">
+										<div class="title h4 js-product-detail-box--fixed__title"></div>
+										<div class="product-detail-box__info__tech js-product-detail-box--fixed__info__tech">
+											<span>Stok Kodu : <strong></strong></span><span>
+												Ürün Kodu : <strong></strong>
+											</span><span>Garanti Süresi : <strong></strong></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-7 text-right">
+								<div class="head">
+									<div class="js-product-detail-box--fixed__price">
+										<div class="product-detail-box__price__big h1"></div>
+										<div class="product-detail-box__price__total"></div>
+									</div>
+								</div>
+								<div class="product-detail-box__price__addcart">
+									<select name="sube" class="selectpicker js-product-detail-box--fixed__sube" id="sube-depo-ust-cubuk">
+										<option value="2001">Merkez Depo</option>
+									</select>
+									<input type="text" name="adet" value="1" data-min="1" data-jointext="" class="js-product-input-increment js-product-detail-box--fixed__adet productAmount" />
+									<button class="product-detail-box__price__addcart__submit productAddToChart">SEPETE EKLE</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="product-fixed-waypoint" class="detail-content-wrapper content-wrapper">
+					<div class="row">
+						<div class="col-md-9">
+							<div class="product-detail__spec-content js-responsive-tab-container">
+								<div class="tab-nav-mobile js-tab-nav-mobile">
+									<select class="selectpicker mobileTabs js-responsive-tab__select-navigation">
+										<option value="#teknik-ozellikler">TEKNİK ÖZELLİKLER</option>
+										<option style="display: none;" value="#olcu-birimleri">ÖLÇÜ BİRİMLERİ</option>
+										<option style="display: none;" value="#urun-belgeleri">ÜRÜN BELGELERİ</option>
+										<option style="display: none;" value="#urun-suruculeri">ÜRÜN SÜRÜCÜLERİ</option>
+										<option value="#urun-brosuru">ÜRÜN BROŞÜRÜ</option>
+									</select>
+								</div>
+								<ul role="tablist" class="nav nav-tabs js-responsive-tab">
+									<li role="presentation" class="active"><a href="#teknik-ozellikler" aria-controls="teknik-ozellikler" role="tab" data-toggle="tab">TEKNİK ÖZELLİKLER</a></li>
+									<li style="display: none;" role="presentation"><a href="#olcu-birimleri" aria-controls="olcu-birimleri" role="tab" data-toggle="tab">ÖLÇÜ BİRİMLERİ</a></li>
+									<li style="display: none;" role="presentation"><a href="#urun-belgeleri" aria-controls="urun-belgeleri" role="tab" data-toggle="tab">ÜRÜN BELGELERİ</a></li>
+									<li style="display: none;" role="presentation"><a href="#urun-suruculeri" aria-controls="urun-suruculeri" role="tab" data-toggle="tab">ÜRÜN SÜRÜCÜLERİ</a></li>
+								</ul>
+								<div id="accordion-1" class="tab-content">
+									<div id="teknik-ozellikler" role="tabpanel" aria-expanded="true" class="tab-pane active">
+										<div class="panel-body">
+											<table class="prop-tab">
+												<tbody>
+													<tr>
+														<td class="title">Monit&#246;r</td>
+														<td>
+															19.5 in&#231;
+														</td>
+													</tr>
+													<tr>
+														<td class="title">Dokunmatik &#214;zelliği</td>
+														<td>
+															Dokunmatik
+														</td>
+													</tr>
+													<tr>
+														<td class="title">İşlemci Ailesi</td>
+														<td>
+															Intel Celeron
+														</td>
+													</tr>
+													<tr>
+														<td class="title">İşlemci Tipi</td>
+														<td>
+															Intel Celeron
+														</td>
+													</tr>
+													<tr>
+														<td class="title">işlemci Kodu</td>
+														<td>
+															N3160
+														</td>
+													</tr>
+													<tr>
+														<td class="title">İşlemci Hızı</td>
+														<td>
+															1,60 GHz
+														</td>
+													</tr>
+													<tr>
+														<td class="title">&#214;n Bellek</td>
+														<td>
+															2 MB
+														</td>
+													</tr>
+													<tr>
+														<td class="title">İşletim Sistemi Ailesi</td>
+														<td>
+															DOS
+														</td>
+													</tr>
+													<tr>
+														<td class="title">İşletim Sistemi</td>
+														<td>
+															FreeDOS
+														</td>
+													</tr>
+													<tr>
+														<td class="title">Anabellek</td>
+														<td>
+															4 GB
+														</td>
+													</tr>
+													<tr>
+														<td class="title">Bellek Tipi</td>
+														<td>
+															DDR3L
+														</td>
+													</tr>
+													<tr>
+														<td class="title">Bellek Hızı</td>
+														<td>
+															1600 MHz
+														</td>
+													</tr>
+													<tr>
+														<td class="title">Bellek Yuvası</td>
+														<td>
+															1 SODIMM
+														</td>
+													</tr>
+													<tr>
+														<td class="title">Disk Tipi</td>
+														<td>
+															SATA
+														</td>
+													</tr>
+													<tr>
+														<td class="title">Sabit Disk - HDD</td>
+														<td>
+															1 TB
+														</td>
+													</tr>
+													<tr>
+														<td class="title">Monit&#246;r &#199;&#246;z&#252;n&#252;rl&#252;k</td>
+														<td>
+															1600 X 900
+														</td>
+													</tr>
+													<tr>
+														<td class="title">Anakart Yongaseti</td>
+														<td>
+															INTEL SoC
+														</td>
+													</tr>
+													<tr>
+														<td class="title">Optik S&#252;r&#252;c&#252;</td>
+														<td>
+															DVD Yazıcı
+														</td>
+													</tr>
+													<tr>
+														<td class="title">Kart Okuyucu</td>
+														<td>
+															Var
+														</td>
+													</tr>
+													<tr>
+														<td class="title">USB 3.0</td>
+														<td>
+															Var
+														</td>
+													</tr>
+													<tr>
+														<td class="title">G&#252;&#231; Kaynağı</td>
+														<td>
+															65 Watt
+														</td>
+													</tr>
+													<tr>
+														<td class="title">Klavye</td>
+														<td>
+															Kablolu
+														</td>
+													</tr>
+													<tr>
+														<td class="title">Fare</td>
+														<td>
+															Kablolu
+														</td>
+													</tr>
+													<tr>
+														<td class="title">G&#246;r&#252;nt&#252; Bağlantıları</td>
+														<td>
+															HDMI &#199;ıkışı
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div id="olcu-birimleri" role="tabpanel" aria-expanded="false" class="tab-pane">
+										<div class="panel-body">
+										</div>
+									</div>
+									<div id="urun-belgeleri" role="tabpanel" aria-expanded="false" class="tab-pane">
+										<div class="panel-body">
+										</div>
+									</div>
+									<div id="urun-suruculeri" role="tabpanel" aria-expanded="false" class="tab-pane">
+										<div class="panel-body">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="product-detail__rightside">
+								<div class="row">
+									<div class="col-sm-6 col-md-12 " id="promosyonlar" style="display: none">
+										<h5>PROMOSYONLAR</h5>
+									</div>
+									<div class="col-sm-6 col-md-12">
+										<h5>BİLGİ</h5>
+										<div class="product-box__wrapper productBoxInformation">
+											<p>
+												Ürünlere ait özellik ve resimler üreticilerin internet sitelerinden alınmaktadır.
+												Yalnızca bilgi verme amaçlıdır. Ürün özelliklerinde ve resimlerindeki hatalardan
+												dolayı Penta sorumlu tutulamaz. Üreticilerin ürün özelliklerinde haber vermeden
+												değişiklik yapma hakları saklıdır.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row" id="urun-brosuru">
+					<h5 class="section-title js-section-title">ÜRÜN BROŞÜRÜ</h5>
+					<div class="panel-body">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="productpdfexport" tabindex="-1" role="dialog" class="modal fade">
+			<div role="document" class="modal-dialog modal-lg">
+				<div class="modal-content" id="productpdfexportModal">
+					<div class="modal-header">
+						<button type="button" data-dismiss="modal" aria-label="Kapat" class="close"><span aria-hidden="true">&times;</span></button>
+						<h4 id="productpdfexport_Title" class="modal-title">PDF Çıktısı Al</h4>
+					</div>
+					<div class="modal-body">
+						<div class="col-md-2" style="margin-top:5px; padding-bottom: 10px;">
+							<img src="http://img.bayinet.com.tr/Content/ProductImages/210123853/images/210123853_1.jpg" alt="" height="80" />
+						</div>
+						<div class="col-md-10" style="margin-top:5px; padding-bottom: 10px;">
+							<strong>MSI AIO PRO 20ET 4BW-045XEU 19.5 HD+(1600X900) MULTI-TOUCH CELERON N3160 4G 1TB DOS DVD BEYAZ-BEYAZ-BEYAZ</strong><br />
+							<div style="color:gray;text-indent:30px;font-size: 14px;margin-top: 10px;"> Yukarıda yazılı ürünün; özellik, resim, fiyat ve taksit seçenekleriyle PDF formatına uygun çıktısını alabilirsiniz. Özel not yazarak ürün broşürünü kendi sloganınızla hazırlayabilir ve dileğiniz yerde kendi adres ve firma bilgilerinizle kullanabilirsiniz.</div>
+						</div>
+						<div class="col-md-12" style="margin-bottom:25px;border-bottom: 1px solid #F3F3F3;"></div>
+						<form class="form-horizontal" role="form">
+							<div class="form-group">
+								<label class="control-label col-sm-4" for="productpdfexport_note">Özel Not ( Opsiyonel )</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="productpdfexport_note" value="" placeholder="Özel Not ( Opsiyonel )">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-4" for="productpdfexport_price">Fiyat</label>
+								<div class="col-sm-3">
+									<input type="text" style="text-align:right" class="form-control" id="productpdfexport_price" value="471,00" data-currency="USD">
+								</div>
+								<div class="col-sm-2" style="font-size: 27px; padding-left: 0px;">
+									USD
+								</div>
+							</div>
+							<div class="form-group" style="margin-bottom:50px">
+								<label class="control-label col-sm-4" for="productpdfexport_cardinstallment">Kredi Kartı Seçenekleri</label>
+								<div class="col-sm-8">
+									<div class="checkbox">
+										<label><input type="checkbox" class="form-control" id="productpdfexport_cardinstallment" checked="checked" /></label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group" style="padding-top: 20px; border-top: 1px solid #F3F3F3;">
+								<label class="control-label col-sm-4"></label>
+								<div class="col-sm-8">
+									Fiyat <strong>K.D.V. hariç fiyat</strong> olmalıdır.
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" data-dismiss="modal" class="btn btn-secondary btn-lg">İptal</button>
+						<button type="button" class="btn btn-success btn-lg" id="btn-productpdfexport" onclick="Product.PdfExportStepNext2('print')"><i class="fa fa-print"></i> Yazdır</button>
+						<button type="button" class="btn btn-success btn-lg" id="btn-productpdfexport" onclick="Product.PdfExportStepNext2('pdf')"><i class="fa fa-file-pdf-o"></i> PDF Çıktı Al</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="productsendmail" tabindex="-1" role="dialog" class="modal fade">
+			<div role="document" class="modal-dialog modal-lg">
+				<div class="modal-content" id="productsendmailModal">
+					<div class="modal-header">
+						<button type="button" data-dismiss="modal" aria-label="Kapat" class="close"><span aria-hidden="true">&times;</span></button>
+						<h4 id="productsendmail_Title" class="modal-title">Müşteriye Haber Ver</h4>
+					</div>
+					<div class="modal-body">
+						<div class="col-md-2" style="margin-top:5px; padding-bottom: 10px;">
+							<img src="http://img.bayinet.com.tr/Content/ProductImages/210123853/images/210123853_1.jpg" alt="" height="80" />
+						</div>
+						<div class="col-md-10" style="margin-top:5px;padding-bottom: 10px;">
+							<strong>MSI AIO PRO 20ET 4BW-045XEU 19.5 HD+(1600X900) MULTI-TOUCH CELERON N3160 4G 1TB DOS DVD BEYAZ-BEYAZ-BEYAZ</strong><br />
+							<div style="color:gray;text-indent:30px;font-size: 14px;margin-top: 10px;"> Yukarıda yazılı ürünün; özellik, resim, ve fiyat seçenekleriyle E-mail gönderebilirsiniz. </div>
+						</div>
+						<div class="col-md-12" style="margin-bottom:25px;border-bottom: 1px solid #F3F3F3;"></div>
+						<form class="form-horizontal" role="form">
+							<div class="form-group">
+								<label class="control-label col-sm-4">Gönderen</label>
+								<div class="col-sm-6">
+
+									HAKAN SENCAN AZRA PROJECT TAŞ.
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-4">Gönderen E-Posta Adresi</label>
+								<div class="col-sm-6">
+									azra@azraproject.com
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-4" for="productsendmail_recievertitle">Alıcı Adı Soyadı</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="productsendmail_recievertitle" value="" placeholder="Alıcı Adı Soyadı">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-4" for="productsendmail_recievermail">Alıcı E-Posta Adresi</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="productsendmail_recievermail" value="" placeholder="Alıcı E-Posta Adresi">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-4" for="productsendmail_note">Özel Not ( Opsiyonel )</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="productsendmail_note" value="" placeholder="Özel Not ( Opsiyonel )">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-4" for="productsendmail_price">Fiyat Bilgisi</label>
+								<div class="col-sm-1">
+									<label><input type="checkbox" class="form-control" id="productsendmail_priceview" checked="checked" /></label>
+								</div>
+								<div class="col-sm-3">
+									<input type="text" style="text-align:right" class="form-control" id="productsendmail_price" value="471,00" data-currency="USD">
+								</div>
+								<div class="col-sm-2" style="font-size: 27px; padding-left: 0px;">
+									USD
+								</div>
+							</div>
+							<div class="form-group" style="padding-top: 20px; border-top: 1px solid #F3F3F3;">
+								<label class="control-label col-sm-4"></label>
+								<div class="col-sm-8">
+									Yukarıda bilgileri bulunan iletişim adresine ürün özellikleri gönderilecektir. <br />
+									Gönderilen Fiyat <strong>K.D.V. hariç fiyat</strong> olmalıdır.
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" data-dismiss="modal" class="btn btn-secondary btn-lg">İptal</button>
+						<button type="button" class="btn btn-success btn-lg" id="btn-productsendmail" onclick="Product.SendMailStepNext2()"><i class="fa fa-envelope"></i> Gönder</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<input id="IsSlider" name="IsSlider" type="hidden" value="False" />
+		<input id="Message" name="Message" type="hidden" value="" />
+		<input id="ProductId" name="ProductId" type="hidden" value="210123853" />
+		<input id="PriceScaleId" name="PriceScaleId" type="hidden" value="" />
+		<input id="ProductPriceDescription" name="ProductPriceDescription" type="hidden" value="MSI AIO PRO 20ET 4BW-045XEU 19.5 HD+(1600X900) MULTI-TOUCH CELERON N3160 4G 1TB DOS DVD BEYAZ-BEYAZ-BEYAZ" />
+		<input id="IsPriceScale" name="IsPriceScale" type="hidden" value="False" />
+		<input id="IsOnlyPackage" name="IsOnlyPackage" type="hidden" value="False" />
+		<input id="IsProductBundle" name="IsProductBundle" type="hidden" value="True" />
+		<input id="IsOlcuBirimleriTabView" name="IsOlcuBirimleriTabView" type="hidden" value="True" />
+
+		<script type="text/javascript" src="/Content/app/js/Penta.vendor.min.js?v=000030"></script>
+		<script type="text/javascript" src="/Content/app/js/Penta.plugins.min.js?v=000030"></script>
+		<script type="text/javascript" src="/Content/app/js/Penta.min.js?v=000030"></script>
+		<script type="text/javascript" src="/Scripts/bt.js?v=000030"></script>
+
+
+		<footer class="footer">
+			<div class="container footer__wrapper">
+				<div class="row">
+
+					<div class="col-md-2 col-sm-8">
+						<div class="footer__social">
+							<div class="footer__title">BİZİ TAKİP EDİN</div>
+							<nav>
+								<a target="_blank" href="https://www.facebook.com/pentateknoloji" class="facebook"><i class="penta-icon pi_zb-facebook"></i></a>
+								<a target="_blank" href="https://twitter.com/pentateknoloji" class="twitter"><i class="penta-icon pi_zb-twitter"></i></a>
+								<a target="_blank" href="https://www.linkedin.com/company/penta-teknoloji-urunleri-dagitim-ticaret-a-s" class="linkedin"><i class="penta-icon pi_zb-linkedin"></i></a>
+								<a target="_blank" href="https://www.youtube.com/channel/UCw6_tNyqZ5_Awv-SGrlLK6A" class="youtube"><i class="penta-icon pi_zb-youtube"></i></a>
+							</nav>
+						</div>
+						<div class="address">
+							<div class="footer__title">ADRES</div>
+							<address><a href="https://www.google.com/maps/place/Bayinet/41.0303594,29.1059069,18.5z/data=!4m2!3m1!1s0x14cac8e30fa27887:0x126ac15d35757633" target="_blank">Organize Sanayi Bölgesi 4. Cad. No:1 34775 Ümraniye/ İSTANBUL</a></address><span href="tel:08502770277" class="phone hidden-xs"> <i class="penta-icon pi_phone"> </i>850 277 0 277</span>
+						</div>
+					</div>
+
+
+					<div class="col-md-2 col-sm-4">
+						<div class="footer__menu">
+							<a data-toggle="collapse" href="#footer-satis-islemleri-footer" aria-expanded="false" aria-controls="footer-satis-islemleri-footer" class="footer__title collapsed js_collapsed">SATIŞ İŞLEMLERİ</a>
+							<div id="footer-satis-islemleri-footer" aria-expanded="false" class="footer__menu__submenu collapse">
+								<nav>
+									<a href="/Basket/Basket">Sepetim</a>
+									<a href="/Order/OrderList">Sipariş Takibi</a>
+									<a href="/Accounting/InvoiceList">Fatura Listesi</a>
+									<a href="javascript:;" onclick="PENTA.Utils.openAjaxPopup('/Procedure/TransformTimes');$.LoadingOverlay('show');">Sevkiyat Saatleri</a>
+									<a href="/Product/CompareProducts">Kıyaslama Sepeti</a>
+
+
+
+								</nav>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2 col-sm-4">
+						<div class="footer__menu">
+							<a data-toggle="collapse" href="#footer-musteri-hizmetleri-footer" aria-expanded="false" aria-controls="footer-musteri-hizmetleri-footer" class="footer__title collapsed js_collapsed">MÜŞTERİ HİZMETLERİ</a>
+							<div id="footer-musteri-hizmetleri-footer" aria-expanded="false" class="footer__menu__submenu collapse">
+								<nav>
+
+
+									<a href="/Customer/TicketForm">Öneri/Yorum</a>
+									<a href="/Order/OrderList?Type=cargo">Kargom Nerede</a>
+									<a href="/Service/Warranty">Garanti Süresi Sorgulama</a>
+									<a href="/Service/TechnicalServicesList">Yetkili Servisler</a>
+									<a href="/Service/DefectiveProducts">Arızalı Ürün Takibi</a>
+									<a href="/Accounting/ReturnInvoiceCreate">İade Formu</a>
+									<a href="/CustomerService/FrequentlyAskedQuestions">Sık Sorulan Sorular</a>
+									<a href="/Ptm">Teknoloji Merkezi</a>
+
+									<a href="/Procedure">Prosedür</a>
+									<a href="/CustomerService/Announcements">Duyurular</a>
+									<a href="/CustomerService/AnnouncementPopup">Size Özel Haberler</a>
+								</nav>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2 col-sm-4">
+						<div class="footer__menu">
+							<a data-toggle="collapse" href="#footer-muhasebe-finans-footer" aria-expanded="false" aria-controls="footer-muhasebe-finans-footer" class="footer__title collapsed js_collapsed">MUHASEBE &amp; FİNANS</a>
+							<div id="footer-muhasebe-finans-footer" aria-expanded="false" class="footer__menu__submenu collapse">
+								<nav>
+
+									<a href="/Accounting/AccountStatementGeneral">Cari Hesap Özeti</a>
+									<a href="/Accounting/AccountStatement">Hesap Ekstresi</a>
+									<a href="/Accounting/AccountStatementAging">Bakiye Yaşlandırma</a>
+									<a href="/Accounting/OpenAccounting">Tahsil Edilecek Çekler</a>
+									<a href="/Pay/Route">E-Ödeme</a>
+									<a href="/Accounting/ePaymentList">E-Ödeme Listesi</a>
+									<a href="/Accounting/BankAccounts">Banka Hesap No.ları</a>
+									<a href="/Customer/BankAccounts">Banka Hesaplarım</a>
+									<a href="/Home/Currencies">Döviz Kurları</a>
+									<a href="/Accounting/BabsForm">BA-BS Formu</a>
+									<a href="/Accounting/AccountOffsetHistory">Cep Telefonu Denkleştirme Raporu</a>
+
+								</nav>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2 col-sm-4">
+						<div class="footer__menu">
+							<a data-toggle="collapse" href="#footer-yonetim-paneli-footer" aria-expanded="false" aria-controls="footer-yonetim-paneli-footer" class="footer__title collapsed js_collapsed">YÖNETİM PANELİ</a>
+							<div id="footer-yonetim-paneli-footer" aria-expanded="false" class="footer__menu__submenu collapse">
+								<nav>
+
+									<a href="/Customer/FirmInformations">Firma Bilgilerim</a>
+									<a href="/UserManagement/UserManagement">Kullanıcı Tanımlama</a>
+									<a href="/Customer/MyDeliveryAdresses">Teslimat Adreslerim</a>
+									<a href="/Accounting/PasswordChange">Şifre İşlemleri</a>
+									<a href="/Accounting/AccountRelatedPersons">İlgili Kişiler</a>
+									<a href="/Pos/CustomerPosMembers">Sanal POS Üye İşlemleri</a>
+									<a href="/Home/SiteMap">Site Haritası</a>
+									<a href="/Account/AboutUs">Hakkımızda</a>
+									<a href="/Account/Contact">İletişim</a>
+								</nav>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-2 col-sm-4">
+						<div class="footer__menu">
+							<a data-toggle="collapse" href="#footer-special-search-footer" aria-expanded="false" aria-controls="#footer-special-search-footer" class="footer__title collapsed js_collapsed">ÖZEL SAYFALAR</a>
+							<div id="footer-special-search-footer" aria-expanded="false" class="footer__menu__submenu">
+								<nav>
+									<!--SpecialPageModel-->
+									<a href="/Product?searchText=Gaming%20%C3%9Cr%C3%BCnleri%3ApageID_1">Gaming &#220;r&#252;nleri</a>
+								</nav>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="footer__bottom">
+					<div class="row">
+						<div class="col-sm-4 col-md-2">
+							<div class="sm-logos"><a href="javascript:;" class="logo-penta"><i class="penta-icon pi_penta"></i></a><a href="tel:08502770277" class="phone visible-xs"><i class="penta-icon pi_phone"> </i>850 277 0 277</a></div>
+						</div>
+						<div class="col-sm-8 col-md-4 col-md-push-6">
+							<div class="award-logos"><img src="/Content/app/img/logo_design.jpg" alt="" /><img src="/Content/app/img/ima.jpg" alt="" /></div>
+						</div>
+						<div class="col-sm-12 col-md-6 col-md-pull-4">
+							<div class="footer__copyright"><span>Copyright &copy; 2017.&nbsp;</span>Penta Teknoloji Ürünleri Dağıtım Ticaret A.Ş</div>
+							<nav><a href="javascript:;" data-toggle="modal" data-target="#PrivacyModal">Gizlilik ve Feragat</a></nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="modal fade" id="PrivacyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel"> Gizlilik Bildirimi</h4>
+					</div>
+					<div class="modal-body">
+
+						<p>Yıldız Holding A.Ş. veya bağlı şirketleri, ziyaretçiler tarafından bu sitedeki formlar aracılığıyla sunulan isminiz, elektronik posta adresiniz, iş ve ev adresiniz, telefon numaranız ve sair kişisel verilerinizi (Bundan sonra ‘Kişisel Bilgiler’ olarak anılacaktır) üçüncü kişilere satmayacağını, kiralamayacağını veya hiçbir şekilde kullandırmayacağını kabul, beyan ve taahhüt eder.</p>
+
+						<p>Yıldız Holding A.Ş. veya bağlı şirketleri, Kişisel Bilgileri aşağıdaki amaçlarla sınırlı olmak üzere kullanacaktır: Basılı yayınlar/yazışmalar göndermek, elektronik posta ile basın bültenleri veya bildirimler göndermek, işe alım süreçlerinde başvurularınızı değerlendirmek, satın aldığınız malları ve/veya ödüllerinizi teslim etmek.</p>
+
+						<p>Kişisel Bilgilere, sadece Yıldız Holding A.Ş. veya bağlı şirketlerinin yetkili personeli ve Kişisel Bilgileri gizli tutmayı kabul etmiş olan üçüncü kişi temsilcilerimiz erişebilirler. Yıldız Holding A.Ş. veya bağlı şirketleri, Kişisel Bilgileri açıklamadan, Kişisel Bilgilerden elde edilebilecek istatistiksel verileri (Tarayıcı tipi, coğrafi konum, yaş, cinsiyet, v.b.), Web sitesini iyileştirmek ve genel olarak tüketicileri hakkında daha çok bilgi sahibi olmak amacıyla kullanabilecektir. Elde edilen bu tür istatistiksel veriler üzerindeki her türlü haklar Yıldız Holding A.Ş. veya bağlı şirketlerine aittir.</p>
+
+						<p>Yıldız Holding A.Ş. veya bağlı şirketleri, web sitesindeki bağlantılar aracılığıyla ulaşacağınız üçüncü kişilere ait web sitelerinin gizlilik ilkeleri hakkında bir garanti vermez, bu nedenle kişisel olarak belirlenebilir herhangi bir bilgi vermeden önce, gittiğiniz sitelerin gizlilik yaklaşımlarını değerlendirmenizi öneririz.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--report problem-->
+
+
+		<a href="javascript:;">
+			<div class="reportProblem hidden-xs">
+				<div class="">Sorun Bildir !</div>
+			</div>
+		</a>
+
+		<div class="reportProblemBox  hidden-xs">
+			<h4>Bu sayfada bir problem mi var ?</h4>
+			<div class="form-group">
+				<small>Problemi buradan iletebilirsiniz</small>
+				<textarea id="reportProblemTextArea" class="form-control" rows="3"></textarea>
+			</div>
+			<button id="reportSend" type="submit" class="btn btn-default pull-right">Sorun Bildir!</button>
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<script type="text/javascript" src="/Scripts/detectmobilebrowser.js?v=000030"></script>
+		<script type="text/javascript" src="/Content/js/select2/js/select2.js?v=000030"></script>
+		<script type="text/javascript" src="/Content/js/select2/js/i18n/tr.js?v=000030"></script>
+		<script type="text/javascript" src="/Content/plugins/jQueryValidation/jquery.validate.js?v=000030"></script>
+		<script type="text/javascript" src="/Content/plugins/icheck-1.x/icheck.js?v=000030"></script>
+		<script type="text/javascript" src="/Content/plugins/show-password/bootstrap-show-password.js?v=000030"></script>
+		<script type="text/javascript" src="/Scripts/lodash-4.1.0.js?v=000030"></script>
+		<script type="text/javascript" src="/Content/js/is-loading/jquery.isloading.min.js?v=000030"></script>
+		<script type="text/javascript" src="/Content/plugins/jquery-loading-overlay/loadingoverlay.min.js?v=000030"></script>
+
+		<script src="/Content/js/jqueryvalidate/jquery.validate.min.js?v=000030"></script>
+		<script src="/Content/js/jqueryvalidate/additional-methods.min.js?v=000030"></script>
+		<script src="/Content/js/jqueryvalidate/localization/messages_tr.js?v=000030"></script>
+		<!--jquery masked-->
+		<script src="/Content/js/masked/jquery.mask.js?v=000030"></script>
+		<!--Webinar-->
+		<script src="/Content/app/js/bayinet.webinar.js?v=000030"></script>
+		<!--Lazyload plugin-->
+		<script src="/Scripts/echo.js?v=000030"></script>
+
+		<script src="/Scripts/jquery.quicksearch.js?v=000030"></script>
+
+		<script src="/Scripts/jquery.jqprint-0.3.js?v=000030"></script>
+
+		<script src="/Content/plugins/jquery_lazyload-master/jquery.lazyload.js?v=000030"></script>
+
+
+		<script type="text/javascript" src="/Content/app/js/script.js?v=000030"></script>
+
+		<a href="javascript:scrollTop();">
+			<img src="/Content/app/img/ScrollTop.svg" alt="Scroll Top" height="48" data-nosvg="~/Content/app/img/ScrollTop.png" class="hidden-xs pageScroolTop" />
+		</a>
+		<div id="ModalContainer"></div>
+		<!--Ölçeklendirme Modalı-->
+		<div id="paketModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" class="modal fade">
+			<div role="document" class="modal-dialog">
+				<div class="modal-content" id="paket-modal-content-first">
+					<div class="modal-header" style="height: 45px;">
+						<button type="button" data-dismiss="modal" aria-label="Kapat" class="close"><span aria-hidden="true">&times;</span></button>
+					</div>
+					<div class="modal-body" id="paket-modal-content">
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="modal fade" id="webinarModal" tabindex="-1" role="dialog" aria-labelledby="mywebinarModal">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="webinar-result">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade modal-topfull" id="basketmodalconfirm_1" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-topfull">
+				<div class="modal-content">
+
+					<div class="modal-body">
+						<span style="font-size:18px"> Bu ürün sepetinizde bulunmaktadır.Ürünü sepete yeni kalem eklemek olarak için 'Yeni Kalem olarak Ekle' , varolan ürününüzü güncellemek için 'Ürünü Güncelle' seçeneğini seçiniz.</span>
+					</div>
+					<div class="modal-footer">
+						<button type="button" data-dismiss="modal" class="btn btn-lg btn-success" id="addtobasket_newitem">Yeni Kalem olarak Ekle</button>
+						<button type="button" data-dismiss="modal" class="btn btn-lg btn-blue" id="addtobasket_updateitem">Ürünü Güncelle</button>
+						<button type="button" data-dismiss="modal" class="btn btn-lg">İptal</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="/Scripts/ViewScripts/Product/ProductDetail.js?v=000030"></script>
+
+
+
+		<script type="text/javascript">var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-12446931-9']); _gaq.push(['_trackPageview']); (function () { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();</script>
+
+
+		<div class="modal fade x" id="BoomCampaign" tabindex="-1" role="dialog" aria-labelledby="smallModal" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content" style="margin: 0 auto;">
+					<div class="modal-body aksamFirsatlariBg ">
+						<div class="bWrapper">
+							<div id="campaignTimeBomContainer" class="owl-boom">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<link rel="manifest" href="/Content/manifestForNotification.json">
+		<script src="/Scripts/jquery.signalR-2.2.0.min.js"></script>
+		<script src="/signalr/hubs"></script>
+
+		<script type="text/javascript">
+
+			//        var svgHeader = $('.svgHeader').text().length;
+			//        $('#svgHeader').css('transform','rotate('+oran(svgHeader)+'deg)');
+
+
+			// Bu javascript layout üzerinde çalışmalı ve her yerden erişilebilir olmalı.
+			var campaignSignal;
+			var dynamicPopupSignal;
+
+			$('#btnBoomCampaign').click(function () {
+
+				var el = document.getElementById('chcBoomCampaign').checked;
+				if (el) {
+					$.get('/Campaign/CampaignTimeBomShow?state=false');
+				}
+
+			});
+			function boomModal(x) {
+
+				$('.owl-boom').hide();
+				$('#BoomCampaign').modal('show');
+
+
+				setTimeout(function () {
+					$('.owl-boom').fadeIn('fast');
+				}, 400);
+
+				if (x == 'owlInit') {
+					setTimeout(function () {
+
+						$('.owl-boom').owlCarousel({
+							autoplay: true,
+							autoplayTimeout: 4000,
+							autoplayHoverPause: true,
+							loop: true,
+							items: 1,
+							nav: true,
+							navText: ['<i class="fa fa-angle-left bLeft">', '<i class="fa fa-angle-right bRight">'],
+							dots: !0,
+							slideSpeed: 500,
+							paginationSpeed: 700
+						});
+
+					}, 400);
+				}
+
+			}
+			setTimeout(function () {
+				// Declare a proxy to reference the hub.
+				campaignSignal = $.connection.campaignHub;
+				dynamicPopupSignal = $.connection.dynamicPopupHub;
+
+				campaignSignal.client.showCampaign = function (data) {
+
+					try {
+						$('.owl-boom').data('owlCarousel').destroy();
+					} catch (e) {
+
+					}
+
+					if (_.isEmpty(appData.VKORG))
+						appData.VKORG = -1;
+					if (_.isEmpty(appData.KDGRP))
+						appData.KDGRP = -1;
+					if (_.isEmpty(appData.SPART))
+						appData.SPART = -1;
+
+
+					var dataModel = JSON.parse(data);
+
+					//campaignTimeBomContainer
+					var showCampaigns = '';
+					campaignLength = dataModel.length;
+					for (var i = 0; i < dataModel.length; i++) {
+
+						if (dataModel[i].SellOrganization == appData.VKORG && dataModel[i].Section == appData.SPART) {
+							showCampaigns += generateCampaignBomHtml(dataModel[i]);
+							continue;
+						}
+
+						if (dataModel[i].SellOrganization == appData.VKORG && dataModel[i].CustomerGroup == appData.KDGRP) {
+							showCampaigns += generateCampaignBomHtml(dataModel[i]);
+							continue;
+						}
+
+						if (dataModel[i].SellOrganization == appData.VKORG && _.isEmpty(dataModel[i].CustomerGroup) && _.isEmpty(dataModel[i].Section)) {
+							showCampaigns += generateCampaignBomHtml(dataModel[i]);
+							continue;
+						}
+					}
+
+					if (!_.isEmpty(showCampaigns)) {
+						$('#campaignTimeBomContainer').html(showCampaigns);
+
+						if (campaignLength > 1) {
+							boomModal('owlInit');
+						} else {
+							boomModal();
+						}
+					}
+
+				};
+				dynamicPopupSignal.client.showDynamicPopup = function (dataModel) {
+					if (_.isEmpty(appData.VKORG))
+						appData.VKORG = -1;
+					if (_.isEmpty(appData.KDGRP))
+						appData.KDGRP = -1;
+					if (_.isEmpty(appData.SPART))
+						appData.SPART = -1;
+
+					var data = JSON.parse(dataModel);
+					var _mainHtml = '';
+					if (data.SellOrganization == appData.VKORG && data.Section == appData.SPART) {
+						_mainHtml = bt.generateBoomAnnouncement(data);
+					}
+
+					if (data.SellOrganization == appData.VKORG && data.CustomerGroup == appData.KDGRP) {
+						_mainHtml = bt.generateBoomAnnouncement(data);
+					}
+
+					if (data.SellOrganization == appData.VKORG && _.isEmpty(data.CustomerGroup) && _.isEmpty(data.Section)) {
+						_mainHtml = bt.generateBoomAnnouncement(data);
+					}
+
+					if (data.Type == 'I') {
+						PENTA.Popup.add($('body'), _mainHtml);
+						$('.penta-popup__close').addClass('AnnouncmentImageX');
+						bt.popupCarousel(false);
+					} else if (data.Type == 'T') {
+						PENTA.Popup.add($('body'), _mainHtml);
+						$('.penta-popup__close').addClass('AnnouncmentTextX');
+						bt.popupCarousel(false);
+					}
+					else {
+						PENTA.Popup.add($('body'), _mainHtml);
+						bt.popupCarousel(false);
+					}
+
+				};
+
+				try {
+
+					// Start the connection.
+					$.connection.hub.start().done(function () {
+						console.log('Hub Bağlandı');
+					}).fail(function (e) {
+						console.log(e + 'Hub bağlantı hatası');
+					});
+
+				} catch (e) {
+					//console.log(e);
+				}
+
+			}, 2000);
+
+
+
+
+		</script>
+
+		<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-messaging.js"></script>
+		<script src="/Scripts/DesktopNotification/app.js"></script>
+
+
+		<script>
+
+
+		</script>
+
+
+</body>
+</html>

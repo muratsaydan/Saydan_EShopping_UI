@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-Saydan_EShopping_UI",
+      "appliesTo": "Saydan_EShopping_UI/",
+      "type": "launch"
+    }
+  ]
+}
